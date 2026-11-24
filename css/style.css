@@ -164,3 +164,22 @@ footer {
         font-size: 30px;
     }
 }
+
+/* Суреттердің дизайны */
+
+.my-photo {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #43e08b;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* Тінтуірді суретке апарғанда */
+
+.my-photo:hover {
+    transform: scale(1.05);
+}
+
