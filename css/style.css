@@ -1,5 +1,5 @@
 
-/* 1. Барлық элементтерге ортақ баптау */
+/* 1. Барлық элементтерге ортақ стиль */
 
 * {
     margin: 0;
@@ -7,11 +7,11 @@
     box-sizing: border-box;
 }
 
-/* 2. Сайттың негізгі дизайны */
+/* 2. Сайттың негізгі бөлігі */
 
 body {
-    background-color: #101713;
-    color: white;
+    background-color: #EAF6FF;
+    color: #24445F;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -19,31 +19,34 @@ body {
 /* 3. Жоғарғы мәзір */
 
 header {
-    background-color: #1b2820;
+    background-color: #FFFFFF;
     padding: 25px 8%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #304238;
+
+    border-bottom: 2px solid #D1E9F8;
 }
 
 header h2 {
-    color: #43e08b;
-    font-size: 25px;
+    color: #2196D2;
+    font-size: 26px;
 }
 
-/* 4. Навигация */
+/* 4. Навигациялық мәзір */
 
 nav a {
-    color: white;
+    color: #315B78;
     text-decoration: none;
     margin-left: 20px;
     font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #43e08b;
+    color: #2196D2;
 }
 
 /* 5. Сырғымалы мәтін */
@@ -52,7 +55,8 @@ nav a:hover {
     overflow: hidden;
     white-space: nowrap;
     padding: 15px;
-    color: #43e08b;
+    color: #168BCC;
+    background-color: #D8F0FF;
     font-weight: bold;
 }
 
@@ -81,59 +85,80 @@ main {
 
 main h1 {
     font-size: 40px;
-    color: #43e08b;
+    color: #168BCC;
     margin-bottom: 25px;
 }
 
 main h2 {
-    color: #43e08b;
+    color: #218BC5;
     margin-bottom: 15px;
 }
 
 main h3 {
     margin-bottom: 10px;
+    color: #315B78;
 }
 
 main p {
-    color: #c1cec5;
+    color: #52718A;
     margin-bottom: 20px;
 }
 
-/* 7. Бөлімдер */
+/* 7. Ақ түсті бөлімдер */
 
 section {
-    background-color: #1b2820;
+    background-color: #FFFFFF;
     padding: 25px;
     margin-bottom: 25px;
-    border-radius: 12px;
-    border: 1px solid #304238;
+    border-radius: 15px;
+    border: 1px solid #CDE7F7;
+    box-shadow: 0 4px 12px rgba(50, 130, 180, 0.08);
 }
 
 /* 8. Суреттер */
 
 img {
     max-width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
-/* 9. Сілтемелер */
-
-a {
+.my-photo {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid #8CCEF5;
+    margin-top: 15px;
     transition: 0.3s;
 }
 
-main a {
-    color: #43e08b;
+.my-photo:hover {
+    transform: scale(1.05);
+}
+
+/* 9. Батырмалар мен сілтемелер */
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #64B5F6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #2196D2;
 }
 
 /* 10. Төменгі бөлік */
 
 footer {
-    background-color: #1b2820;
+    background-color: #D8F0FF;
     text-align: center;
     padding: 25px;
-    color: #c1cec5;
-    border-top: 1px solid #304238;
+    color: #315B78;
+    border-top: 1px solid #CDE7F7;
 }
 
 /* 11. Телефонға бейімдеу */
@@ -163,23 +188,9 @@ footer {
     main h1 {
         font-size: 30px;
     }
+
+    .my-photo {
+        width: 230px;
+        height: 220px;
+    }
 }
-
-/* Суреттердің дизайны */
-
-.my-photo {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 2px solid #43e08b;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-
-/* Тінтуірді суретке апарғанда */
-
-.my-photo:hover {
-    transform: scale(1.05);
-}
-
