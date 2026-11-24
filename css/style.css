@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101713;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Жоғарғы мәзір */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #19251e;
+}
+
+header h2 {
+    color: #43e08b;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #43e08b;
+}
+
+/* Сырғымалы мәтін */
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px;
+    color: #43e08b;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: move 15s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Басты бет */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 8%;
+    gap: 30px;
+}
+
+.info {
+    max-width: 550px;
+}
+
+.info h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.info h1 span {
+    color: #43e08b;
+}
+
+.info h3 {
+    margin-bottom: 15px;
+}
+
+.info p {
+    color: #b8c4bb;
+    line-height: 1.8;
+}
+
+/* Батырма */
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #43e08b;
+    color: #101713;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* Фото */
+
+.photo img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Төменгі бөлік */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #19251e;
+    color: #b8c4bb;
+}
+
+/* Телефонға бейімдеу */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo img {
+        width: 230px;
+    }
+}
