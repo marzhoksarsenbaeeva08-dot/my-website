@@ -1,47 +1,59 @@
 
+/* 1. Барлық элементтерге ортақ баптау */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 2. Сайттың негізгі дизайны */
+
 body {
     background-color: #101713;
     color: white;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Жоғарғы мәзір */
+/* 3. Жоғарғы мәзір */
 
 header {
+    background-color: #1b2820;
+    padding: 25px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
-    background-color: #19251e;
+    border-bottom: 1px solid #304238;
 }
 
 header h2 {
     color: #43e08b;
+    font-size: 25px;
 }
+
+/* 4. Навигация */
 
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #43e08b;
 }
 
-/* Сырғымалы мәтін */
+/* 5. Сырғымалы мәтін */
 
 .marquee {
     overflow: hidden;
     white-space: nowrap;
     padding: 15px;
     color: #43e08b;
+    font-weight: bold;
 }
 
 .marquee span {
@@ -54,88 +66,101 @@ nav a:hover {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
 }
 
-/* Басты бет */
+/* 6. Негізгі бөлім */
 
-.hero {
-    min-height: 75vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px 8%;
-    gap: 30px;
+main {
+    min-height: 70vh;
+    padding: 60px 8%;
 }
 
-.info {
-    max-width: 550px;
-}
-
-.info h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.info h1 span {
+main h1 {
+    font-size: 40px;
     color: #43e08b;
+    margin-bottom: 25px;
 }
 
-.info h3 {
+main h2 {
+    color: #43e08b;
     margin-bottom: 15px;
 }
 
-.info p {
-    color: #b8c4bb;
-    line-height: 1.8;
+main h3 {
+    margin-bottom: 10px;
 }
 
-/* Батырма */
-
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background-color: #43e08b;
-    color: #101713;
-    text-decoration: none;
-    border-radius: 8px;
+main p {
+    color: #c1cec5;
+    margin-bottom: 20px;
 }
 
-/* Фото */
+/* 7. Бөлімдер */
 
-.photo img {
-    width: 300px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
+section {
+    background-color: #1b2820;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #304238;
 }
 
-/* Төменгі бөлік */
+/* 8. Суреттер */
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* 9. Сілтемелер */
+
+a {
+    transition: 0.3s;
+}
+
+main a {
+    color: #43e08b;
+}
+
+/* 10. Төменгі бөлік */
 
 footer {
+    background-color: #1b2820;
     text-align: center;
-    padding: 20px;
-    background-color: #19251e;
-    color: #b8c4bb;
+    padding: 25px;
+    color: #c1cec5;
+    border-top: 1px solid #304238;
 }
 
-/* Телефонға бейімдеу */
+/* 11. Телефонға бейімдеу */
 
 @media (max-width: 700px) {
+
     header {
         flex-direction: column;
         gap: 20px;
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
-    .photo img {
-        width: 230px;
+    nav a {
+        margin-left: 0;
+    }
+
+    main {
+        padding: 35px 5%;
+    }
+
+    main h1 {
+        font-size: 30px;
     }
 }
